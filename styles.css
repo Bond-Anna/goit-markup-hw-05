@@ -147,6 +147,43 @@ button.white {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+.backdrop {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.modal {
+  position: absolute;
+  min-width: 528px;
+  min-height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--text-white);
+}
+
 /* Особенности */
 
 .features-list {
@@ -454,6 +491,29 @@ a.down-contacts {
 
   border: 1px solid #EEEEEE;
   border-top: 0px;
+}
+
+.product {
+  position: relative;
+}
+
+.product::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: ;
+}
+
+.product-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: var(--text-white);
 }
 
 /* ICONS */
