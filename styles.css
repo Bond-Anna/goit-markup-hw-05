@@ -4,6 +4,8 @@
   --text-white: #ffffff;
   --text-footer: rgba(255, 255, 255, 0.6);
   --accent-color: #2196F3;
+
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container {
@@ -66,7 +68,8 @@ header {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  
+
+  transition: color 250ms var(--time-cubic);
 }
 
 .logo {
@@ -93,6 +96,23 @@ header {
 
 .link.current {
   color: var(--accent-color);
+}
+
+.top-ul li{
+  position: relative;
+}
+
+.link.current::after {
+  content: "";
+
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .nav a {
@@ -528,16 +548,6 @@ a.down-contacts {
   color: var(--accent-color);
 }
 
-.media-area:hover,
-.media-area:active {
-  background-color: var(--accent-color);
-}
-
-.media:hover,
-.media:active {
-  fill: #ffffff;
-}
-
 .social-media {
   display: flex;
   margin: 16px 32px 30px;
@@ -556,15 +566,32 @@ a.down-contacts {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background-color: none;
   color: #AFB1B8;
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.media-area:hover,
+.media-area:active {
+  background-color: var(--accent-color);
+}
+
 
 .media {
   width: 20px;
   height: 20px;
   padding: 12px;
   fill: currentColor;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.media:hover,
+.media:active {
+  fill: #ffffff;
 }
 
 .clients {
@@ -585,6 +612,14 @@ a.down-contacts {
   text-decoration: none;
   color: #AFB1B8;
   border: 1px solid;
+
+  transition: color 250ms var(--cubic), border 250ms var(--cubic)
+}
+
+.clients-card:hover,
+.clients-card:active {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 .clients li + li {
@@ -593,15 +628,4 @@ a.down-contacts {
 
 .card {
   fill: currentColor;
-}
-
-/* .card:hover,
-.card:active {
-  color: var(--accent-color);
-} */
-
-.clients-card:hover,
-.clients-card:active {
-  color: var(--accent-color);
-  border: 1px solid var(--accent-color);
 }
