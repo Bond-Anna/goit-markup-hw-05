@@ -36,6 +36,10 @@ img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 button {
   border: none;
   border-radius: 4px;
@@ -67,7 +71,6 @@ header {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 
   transition: color 250ms var(--time-cubic);
 }
@@ -77,7 +80,6 @@ header {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  text-decoration: none;
 
   padding-top: 24px;
   padding-bottom: 25px;
@@ -117,7 +119,6 @@ header {
 
 .nav a {
   color: var(--text-main);
-  text-decoration: none;
 }
 
 
@@ -386,7 +387,6 @@ a.down-contacts {
 
   font-size: 14px;
   line-height: 1.7;
-  text-decoration: none;
 }
 
 .footer {
@@ -500,7 +500,8 @@ a.down-contacts {
   margin-top: 30px;
 }
 
-.projects>li:hover {
+.projects>li:hover,
+.projects>li:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
 }
@@ -537,7 +538,8 @@ a.down-contacts {
   transition: transform 250ms var(--cubic);
 }
 
-.product:hover .product-text {
+.product:hover .product-text,
+.product:focus .product-text {
   transform: translateY(0%);
 }
 
@@ -549,7 +551,7 @@ a.down-contacts {
 }
 
 .icon:hover,
-.icon:active {
+.icon:focus {
   color: var(--accent-color);
 }
 
@@ -563,7 +565,6 @@ a.down-contacts {
 }
 
 .media-area {
-  text-decoration: none;
   width: 44px;
   height: 44px;
 
@@ -580,7 +581,7 @@ a.down-contacts {
 }
 
 .media-area:hover,
-.media-area:active {
+.media-area:focus {
   background-color: var(--accent-color);
 }
 
@@ -595,7 +596,7 @@ a.down-contacts {
 }
 
 .media:hover,
-.media:active {
+.media:focus {
   fill: #ffffff;
 }
 
@@ -614,7 +615,6 @@ a.down-contacts {
   
   border-radius: 4px;
   box-sizing: border-box;
-  text-decoration: none;
   color: #AFB1B8;
   border: 1px solid;
 
@@ -622,7 +622,7 @@ a.down-contacts {
 }
 
 .clients-card:hover,
-.clients-card:active {
+.clients-card:focus {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
